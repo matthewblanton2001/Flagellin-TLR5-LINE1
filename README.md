@@ -13,7 +13,7 @@ TCGA survival analysis (TLR5)
 
 Repository Structure
 
-NSCLC_16A/ – QIIME2 processing and downstream microbiome analysis
+NSCLC_16S/ – QIIME2 processing and downstream microbiome analysis
 
 LINE1 Repeat Expression in HBEC treated with flagellin/ – RNA-seq alignment, TE repeat quantification via HOMER, and DE analysis
 
