@@ -22,7 +22,7 @@ flagellar_tax <- flagellar_tax %>%
 #Analyze the relative fliC abundance from selected genera
 genus_fliC<-flagellar_tax%>%group_by(sample,Genus)%>%summarise(fliC_abundance=sum(taxon_function_abun),.groups="drop")%>%filter(!is.na(Genus),Genus !="",Genus !="uncultured",Genus !="metagenome",Genus !="Ambiguous_taxa",fliC_abundance>0)
 top_genera<-genus_fliC%>%group_by(Genus)%>%summarise(total=sum(fliC_abundance))%>%arrange(desc(total))
-meta<-read.csv("metadata_dataset1345.csv")
+meta<-read.csv("metadata_merged_NSCLC.csv")
 genus_fliC_meta<-genus_fliC%>%left_join(meta,by=c("sample"="sample.id"))%>%filter(!is.na(Disease))
 genera_of_interest<-c("Escherichia-Shigella","Salmonella","Selenomonas","Pseudomonas","Campylobacter","Delftia","Stenotrophomonas","Sphingomonas")
 relative_fliC<-genus_fliC_meta%>%group_by(sample)%>%mutate(percent_fliC=100*fliC_abundance/sum(fliC_abundance))
