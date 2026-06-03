@@ -11,6 +11,8 @@ RNA-seq analysis of LINE-1 expression (HOMER)
 
 TCGA survival analysis (TLR5)
 
+scRNAseq LUSC+LUAD and controls analysis
+
 Repository Structure
 
 NSCLC_16S/ – QIIME2 processing and downstream microbiome analysis
@@ -27,6 +29,8 @@ QIIME2 (2024.10)
 R (≥4.4.1)
 HISAT2
 HOMER
+PICRUSt2
+
 Reproducibility
 
 Code Availability
